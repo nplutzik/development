@@ -26,3 +26,8 @@ The digital divide may be an issue. There are many people who do not have access
 User Stories/Epics
 
 https://www.pivotaltracker.com/s/projects/1047154
+
+
+ERD
+
+https://github.com/nplutzik/development/blob/master/Development.pdf
