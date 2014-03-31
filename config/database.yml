@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: serveforcommunity_development
   pool: 5
-  username: serveforcommunity
+  username: nplutzik
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: serveforcommunity_test
   pool: 5
-  username: serveforcommunity
+  username: nplutzik
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: serveforcommunity_production
   pool: 5
-  username: serveforcommunity
+  username: nplutzik
   password:
