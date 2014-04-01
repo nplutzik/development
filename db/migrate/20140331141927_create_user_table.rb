@@ -4,6 +4,7 @@ class CreateUserTable < ActiveRecord::Migration
       t.string :name
       t.string :address
       t.text :information
+      t.text :password_digest
 
       t.timestamps
     end
