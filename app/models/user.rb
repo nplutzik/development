@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'data_mapper'
+DataMapper.setup(:default, 'postgres://nplutzik:@localhost/serveforcommunity_development')
 
 class User
   include DataMapper::Resource
@@ -10,12 +11,7 @@ class User
   property :information,  Text, :required => true
   property :password_digest,  String, :required => true
 
-  property :created_at, DateTime
-  property :updated_at, DateTime
 
-    def self.authenticate(login, pass)
-        u = User.first(:login => login )
-        return nil if u.nil?
-        return u if u.password == pass
-     end
 end
+
+DataMapper.finalize
