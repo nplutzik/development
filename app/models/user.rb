@@ -1,22 +1,15 @@
-require 'rubygems'
-require 'data_mapper'
-DataMapper.setup(:default, 'postgres://nplutzik:@localhost/serveforcommunity_development')
+class User < ActiveRecord::Base
+  has_secure_password
+  has_many(:favorites)
+  has_many(:services, through: :favorites)
 
-class User
-  include DataMapper::Resource
 
-  property :id,    Serial, :key => true
-  property :name,  String, :required => true, :unique => true, :format => /[a-z]/
-  property :email, String, :required => true, :unique => true, :format => /@/
-  property :information,  Text, :required => true
-  property :password_digest,  String, :required => true
+  # validates(:email, uniqueness: true, presence: true)
+  # # validates(:password, length: { minimum: 5 }, on: :create)
+  # validates(:name, presence: true)
+  # validates(:admin, inclusion: { in: [true, false] })
+  # validates(:balance, numericality: {
+  #                           only_integer: true,
+  #                           greater_than_or_equal_to: 0 })
 
-   def self.authenticate(login, pass)
-        u = User.first(:login => login )
-        return nil if u.nil?
-        return u if u.password == pass
-     end
 end
-DataMapper.finalize
-DataMapper.auto_upgrade!
-

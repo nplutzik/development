@@ -1,4 +1,4 @@
-class SongsController < ApplicationController
+class ServicesController < ApplicationController
 
   before_action(:require_authentication)
   before_action(:require_authentication, only [:new, :create, :edit, :update, :destroy])
