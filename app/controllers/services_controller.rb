@@ -38,22 +38,22 @@ class SongsController < ApplicationController
     @service.update(service_params)
     redirect_to service_path(@service)
   end
-
   def destroy
+
     @service = Service.find(params[:id])
     @service.destroy
     redirect_to services_path
   end
 
-  def search
-    packaged_services = Song.services_search(params[:query])
-    @services = packaged_services.map do |song|
-      {
-        services_service_id: service[:services_service_id],
-        service: service[:service],
-      }
-    end
-  end
+  # def search
+  #   packaged_services = Song.services_search(params[:query])
+  #   @services = packaged_services.map do |song|
+  #     {
+  #       services_service_id: service[:services_service_id],
+  #       service: service[:service],
+  #     }
+  #   end
+  # end
 
 #   def quickadd
 #     @song = Song.itunes_lookup(params[:itunes_song_id])
