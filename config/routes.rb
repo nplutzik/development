@@ -1,4 +1,31 @@
 Serveforcommunity::Application.routes.draw do
+
+  get '/login', to: 'sessions#new'
+  post '/sessions', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
+  resources :users do
+    resources :favorites, shallow: true
+  end
+
+  resources :users
+  resources :services do
+    collection do
+      get 'search'
+      post 'quickadd'
+    end
+  end
+
+  get '/user/services', to: 'services#my_index'
+  post '/user/addservice', to: 'users#add_service'
+
+  post '/favorite', to: 'favorites#create'
+
+  root to: 'welcome#index'
+
+
+end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +80,3 @@ Serveforcommunity::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
