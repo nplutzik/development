@@ -11,7 +11,11 @@ class User
   property :information,  Text, :required => true
   property :password_digest,  String, :required => true
 
-
+  self.authenticate(login, pass)
+   u = User.first(:login => login )
+    return nil if u.nil? return u if u.password == pass end
 end
 
 DataMapper.finalize
+DataMapper.auto_upgrade!
+
