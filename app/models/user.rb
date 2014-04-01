@@ -1,4 +1,3 @@
-class User
 require 'rubygems'
 require 'data_mapper'
 
