@@ -5,19 +5,43 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>li{margin-bottom:0;}</style>
 </head>
 <body>
-<% if current_user  %>
-  <p>
-    Hello, <%= current_user.name %>! <br>
-    <%= link_to "Logout", logout_path %> |
-    <%= link_to "My Services", "/user/services" %> |
-  </p>
-<% else %>
-  <%= link_to "Login", login_path %><br>
-<% end %>
-<h1><%= link_to "Serve For Community", root_path %></h1>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+            <ul class="nav navbar-nav > li > a {padding-top:10px !important; padding-bottom:10px !important;}
+            navbar {min-height:40px !important}"
+            <li><img src="http://www.logomaker.com/logo-images/a100e43d36036479.gif" width="115" height="50"/>
+            <a href="http://www.logomaker.com"><img src="http://www.logomaker.com/images/logos.gif" alt="website design" border="0"/></a></li>
+            </ul>
+          <ul class="nav navbar-nav navbar-left">
+        <div class="navbar-header navbar-brand">
+          <%= link_to "Serve For Community", root_path %>
+        </div>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Services", services_path %></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user  %>
+            <p>
+              <li>Hello, <%= current_user.name %>!</li>
+              <li><%= link_to "Logout", logout_path %> </li>
+              <li><%= link_to "My Services", "/user/services" %> </li>
+            </p>
+            <% else %>
+            <li><%= link_to "Login", login_path %></li>
+            <li><%= link_to "Sign up", new_user_path %></li>
+            <% end %>
+          </ul>
+      </div>
+    </div>
+<div class="container">
 <%= yield %>
-
+</div>
 </body>
 </html>
+
+
+
