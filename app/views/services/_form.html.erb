@@ -1,0 +1,21 @@
+<%= form_for(@service) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :information %><br>
+    <%= f.text_field :information %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= collection_select(:service, :user_id, User.all, :id, :name) %><br>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
