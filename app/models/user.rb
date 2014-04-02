@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_many(:favorites)
-  has_many(:services, through: :favorites)
+  has_and_belongs_to_many :services
 
+end
 
   # validates(:email, uniqueness: true, presence: true)
   # # validates(:password, length: { minimum: 5 }, on: :create)
@@ -10,6 +11,3 @@ class User < ActiveRecord::Base
   # validates(:admin, inclusion: { in: [true, false] })
   # validates(:balance, numericality: {
   #                           only_integer: true,
-  #                           greater_than_or_equal_to: 0 })
-
-end
