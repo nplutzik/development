@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
 
   before_action(:require_authentication)
-  before_action(:require_authentication, only [:new, :create, :edit, :update, :destroy])
+  before_action(:require_authentication, only: [:new, :create, :edit, :update, :destroy])
 
   def index
     @services = Service.all
@@ -44,6 +44,7 @@ class ServicesController < ApplicationController
     @service.destroy
     redirect_to services_path
   end
+end
 
   # def search
   #   packaged_services = Song.services_search(params[:query])
