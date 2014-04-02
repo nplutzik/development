@@ -1,13 +1,13 @@
 <h3><%= @service.name %></h3>
-<p><strong>name: </strong><%= @service.user.name %></p>
-<p><strong>address: </strong><%= @service.address %></p>
-<p><strong>information: </strong><%= @service.information %></p>
-<p><img class="song-image" src="<%= @song.artwork %>" /></p>
+<p><strong>Name: </strong><%= @service.name %></p>
+<p><strong>Address: </strong><%= @service.address %></p>
+<p><strong>Information: </strong><%= @service.information %></p>
 <p>
   <%= link_to "All", services_path %>
-  <%= link_to "Edit", edit_service_path(@song) %>
+  <%= link_to "Edit", edit_service_path(@service) %>
   <%= link_to 'Destroy', @service, method: :delete, data: { confirm: 'Are you sure?' } %>
   <%= link_to 'Home', root_path %>
 </p>
+
 
 <iframe width="500" height="300" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col0+from+1yRBEgAORqSyf12sCiGuJ100O9eBBviE7ATtp2Cv3&amp;viz=MAP&amp;h=false&amp;lat=39.62307473127366&amp;lng=-76.468765625&amp;t=1&amp;z=6&amp;l=col0&amp;y=4&amp;tmplt=4&amp;hml=ONE_COL_LAT_LNG"></iframe>

@@ -14,30 +14,14 @@
   </thead>
 
   <tbody>
-    <% @services.each do |services| %>
+    <% @services.each do |service| %>
       <tr>
-        <td><%= service.name %></td>
-        <td><img src = "<%= service.artwork %>"
-        </td>
-        <td><%= service.name %></td>
+        <td><%= link_to service.name, service %></td>
         <td><%= service.address %></td>
-        <td><%= service.user.name %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td>
-          <%= form_tag("/favorites", method: "post") do %>
-            <%= hidden_field_tag(:service_id, service.id) %>
-            <%= submit_tag("Favorite!") %>
           <% end %>
         </td>
         <td>
-          <%= form_tag("/favorites", method: "post") do %>
-          <%= hidden_field_tag(:service_id, service.id) %>
-          <%= submit_tag("Add to Favorites!") %>
-          <% end %>
       </td>
-    <% end %>
   </tbody>
 </table>
 
