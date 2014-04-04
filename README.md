@@ -27,7 +27,6 @@ The digital divide may be an issue. There are many people who do not have access
 Bootstrap<br>
 Skeleton<br>
 Google Fusion Tables/iFrame
-
 <br>
 <b>Libraries Used:</b>
 <br>
