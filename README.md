@@ -29,7 +29,6 @@ Skeleton<br>
 Google Fusion Tables/iFrame
 
 <br>
-<br>
 <b>Libraries Used:</b>
 <br>
 NYC Open Data
