@@ -21,10 +21,11 @@ Potential Issues:
 The digital divide may be an issue. There are many people who do not have access to a computer or a cell phone, and often these will be the same people that need help. This will be a really important challenge to overcome.
 
 
+
 API's/Other Technologies
 <br>
-Bootstrap,<br>
-Skeleton,<br>
+Bootstrap<br>
+Skeleton<br>
 Google Fusion Tables/iFrame
 
 
