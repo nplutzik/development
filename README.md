@@ -22,19 +22,19 @@ The digital divide may be an issue. There are many people who do not have access
 
 
 
-<b>API's/Other Technologies<b>
+<b>API's/Other Technologies</b>
 <br>
 Bootstrap<br>
 Skeleton<br>
 Google Fusion Tables/iFrame
 
 
-<b>Libraries Used:<b>
+<b>Libraries Used:</b>
 <br>
 NYC Open Data
 
 
-<b>User Stories/Epics<b>
+<b>User Stories/Epics</b>
 
 https://www.pivotaltracker.com/s/projects/1047154
 
