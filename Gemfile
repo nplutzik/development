@@ -48,3 +48,4 @@ gem 'pry', group: :development
 # gem 'data_mapper', '1.2.0'
 
 # gem 'dm-postgres-adapter', '1.2.0'
+gem 'rails_12factor', group: :production

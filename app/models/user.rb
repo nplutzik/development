@@ -8,6 +8,4 @@ end
   # validates(:email, uniqueness: true, presence: true)
   # # validates(:password, length: { minimum: 5 }, on: :create)
   # validates(:name, presence: true)
-  # validates(:admin, inclusion: { in: [true, false] })
-  # validates(:balance, numericality: {
-  #                           only_integer: true,
+

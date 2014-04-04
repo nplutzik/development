@@ -5,7 +5,7 @@ Serveforcommunity::Application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   resources :users do
-    resources :favorites, shallow: true
+    resources :services
   end
 
   resources :users
@@ -19,9 +19,9 @@ Serveforcommunity::Application.routes.draw do
   get '/user/services', to: 'services#my_index'
   post '/user/addservice', to: 'users#add_service'
 
-  post '/favorite', to: 'favorites#create'
-
   root to: 'welcome#index'
+
+
 
 
 end
