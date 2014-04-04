@@ -22,6 +22,7 @@ The digital divide may be an issue. There are many people who do not have access
 
 
 API's/Other Technologies
+<br>
 Bootstrap
 Skeleton
 Google Fusion Tables/iFrame
