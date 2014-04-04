@@ -15,30 +15,30 @@ Instead of searching through long lists and individual websites, SERVETHECOMMUNI
 
 Not only can people see what services are available, but they can then research causes that they want to be involved in. This will help with community outreach from both sides.
 
-
+<br>
 <b>Potential Issues:<b>
 
 The digital divide may be an issue. There are many people who do not have access to a computer or a cell phone, and often these will be the same people that need help. This will be a really important challenge to overcome.
 
 
 
-API's/Other Technologies
+<b>API's/Other Technologies<b>
 <br>
 Bootstrap<br>
 Skeleton<br>
 Google Fusion Tables/iFrame
 
 
-Libraries Used:
+<b>Libraries Used:<b>
 <br>
 NYC Open Data
 
 
-User Stories/Epics
+<b>User Stories/Epics<b>
 
 https://www.pivotaltracker.com/s/projects/1047154
 
 
-ERD
+<b>ERD<b>
 
 https://github.com/nplutzik/development/blob/master/Development%20(5).pdf
