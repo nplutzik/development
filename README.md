@@ -23,12 +23,13 @@ The digital divide may be an issue. There are many people who do not have access
 
 API's/Other Technologies
 <br>
-Bootstrap
-Skeleton
+Bootstrap,<br>
+Skeleton,<br>
 Google Fusion Tables/iFrame
 
 
 Libraries Used:
+<br>
 NYC Open Data
 
 
