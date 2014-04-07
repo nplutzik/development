@@ -8,12 +8,8 @@ Serveforcommunity::Application.routes.draw do
   resources :services
   end
 
-  resources :users do
-    resources :services do
-      collection do
-      get 'search'
-      post 'quickadd'
-    end
+  resources :users
+  resources :services do
   end
 
   get '/users/services', to: 'services#my_index'
@@ -79,4 +75,4 @@ end
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-    end
+  #   end
