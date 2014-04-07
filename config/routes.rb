@@ -8,17 +8,16 @@ Serveforcommunity::Application.routes.draw do
   resources :services
   end
 
-  resources :users
-  resources :user_id
-  resources :services do
-    collection do
+  resources :users do
+    resources :services do
+      collection do
       get 'search'
       post 'quickadd'
     end
   end
 
-  # get '/users/services', to: 'services#my_index'
-  # post '/users/addservice', to: 'users#add_service'
+  get '/users/services', to: 'services#my_index'
+  post '/users/addservice', to: 'users#add_service'
 
   root to: 'welcome#index'
 
