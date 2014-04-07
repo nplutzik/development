@@ -10,10 +10,14 @@ Serveforcommunity::Application.routes.draw do
 
   resources :users
   resources :services do
+    collection do
+      get 'search'
+      post 'quickadd'
+    end
   end
 
-  get '/users/services', to: 'services#my_index'
-  post '/users/addservice', to: 'users#add_service'
+  get '/user/services', to: 'services#my_index'
+  post '/user/addservice', to: 'users#add_service'
 
   root to: 'welcome#index'
 
