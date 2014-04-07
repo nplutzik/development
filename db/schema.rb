@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140402070014) do
   end
 
   create_table "users", force: true do |t|
+    t.boolean :admin
     t.string   "name"
     t.string   "address"
     t.text     "information"

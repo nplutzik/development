@@ -1,11 +1,10 @@
 class User < ActiveRecord::Base
+  validates(:name, presence: true)
+  validates(:email, uniqueness: true,
+                    presence: true)
+  validates(:password, presence: true,
+                       length: { minimum: 5,
+                                 message: 'must be at least 5 characters'})
   has_secure_password
-  has_many(:favorites)
-  has_and_belongs_to_many :services
-
+  has_and_belongs_to_many :services, class_name: "Service", foreign_key: "creator"
 end
-
-  # validates(:email, uniqueness: true, presence: true)
-  # # validates(:password, length: { minimum: 5 }, on: :create)
-  # validates(:name, presence: true)
-
