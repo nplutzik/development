@@ -5,10 +5,11 @@ Serveforcommunity::Application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   resources :users do
-    resources :services
+  resources :services
   end
 
   resources :users
+  resources :user_id
   resources :services do
     collection do
       get 'search'
@@ -16,8 +17,8 @@ Serveforcommunity::Application.routes.draw do
     end
   end
 
-  get '/user/services', to: 'services#my_index'
-  post '/user/addservice', to: 'users#add_service'
+  # get '/users/services', to: 'services#my_index'
+  # post '/users/addservice', to: 'users#add_service'
 
   root to: 'welcome#index'
 
