@@ -50,5 +50,4 @@ gem 'pry', group: :development
 # gem 'dm-postgres-adapter', '1.2.0'
 gem 'rails_12factor', group: :production
 
-ruby "2.1.1"
 
