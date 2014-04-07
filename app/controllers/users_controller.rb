@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     # only admins can create users while logged in
     require_admin_authentication if current_user
     @user = User.new(user_params)
-    @user.update(admin: false, score: 0)
+    @user.update(admin: false)
     if @user.save
       # user is logged in upon creation
       session[:user_id] = @user.id

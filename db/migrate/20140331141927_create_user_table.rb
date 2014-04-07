@@ -5,7 +5,6 @@ class CreateUserTable < ActiveRecord::Migration
       t.string :address
       t.text :information
       t.text :password_digest
-      t.boolean :admin
 
       t.timestamps
     end
