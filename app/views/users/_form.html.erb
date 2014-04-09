@@ -1,42 +1,40 @@
 <%= form_for(@user) do |f| %>
-
-  <% if @user.errors.any? %>
-    Please correct the following errors:
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
-
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <% @user.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :address %>
+    <%= f.text_field :address, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :information %><br>
+
+    <div>
+    <%= f.label :information %>
     <%= f.text_field :information %>
   </div>
-   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password, required: true %>
   </div>
 
-  <div class="actions">
+  <div>
+    <%= f.label :password_confirmation, 'Confirm Password' %>
+    <%= f.password_field :password_confirmation, required: true %>
+  </div>
+<div class="actions">
     <%= f.submit %>
-  </div>
+</div>
 <% end %>
-
-

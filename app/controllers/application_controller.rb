@@ -20,4 +20,6 @@ class ApplicationController < ActionController::Base
   def require_admin_authentication
     redirect_to root_path unless current_admin
   end
+
+
 end

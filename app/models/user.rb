@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
                        length: { minimum: 5,
                                  message: 'must be at least 5 characters'})
   has_secure_password
-  has_and_belongs_to_many :services, class_name: "Service", foreign_key: "creator"
+  has_and_belongs_to_many :services
 end

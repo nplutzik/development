@@ -1,33 +1,18 @@
-<%= form_for(@service) do |f| %>
-  <div class="field">
+<%= form_for @service do |f| %>
+  <div>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
-  <div class="field">
+  <div>
     <%= f.label :information %><br>
     <%= f.text_field :information %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.collection_select(:user_id, User.all, :id, :name) %><br>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
 
-
-<!--
-  create_table "services", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.text     "information"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
- -->
